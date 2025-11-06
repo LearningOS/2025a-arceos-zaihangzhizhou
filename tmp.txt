@@ -142,8 +142,8 @@ log_level = warn
 
 [34mCreate '/tmp/f1' and write [hello] ...[0m
 [34mRename '/tmp/f1' to '/tmp/f2' ...[0m
-[37m[  0.306833 0 axfs_vfs:160] [33m[AxError::Unsupported][m
-[m[37m[  0.309789 0 axruntime::lang_items:5] [31mpanicked at exercises/ramfs_rename/src/main.rs:51:9:
+[37m[  0.788486 0 axfs_vfs:160] [33m[AxError::Unsupported][m
+[m[37m[  0.795493 0 axruntime::lang_items:5] [31mpanicked at exercises/ramfs_rename/src/main.rs:51:9:
 Error: Operation not supported[m
 [mramfs_rename fault
     [92;1mCreating[0m FAT32 disk image "disk.img" ...
@@ -215,9 +215,9 @@ smp = 1
 build_mode = release
 log_level = warn
 
-[37m[  0.062342 0 axruntime::lang_items:5] [31mpanicked at /home/lihaotian/arceos-lab/arceos/modules/bump_allocator/src/lib.rs:29:9:
-not yet implemented[m
-[malt_alloc default
+[34mRunning bump tests...[0m
+[34mBump tests run OK![0m
+alt_alloc pass
     [92;1mCreating[0m FAT32 disk image "disk.img" ...
 mkfs.fat 4.2 (2021-01-31)
     [92;1mBuilding[0m App: support_hashmap, Arch: riscv64, Platform: riscv64-qemu-virt, App type: rust
@@ -296,6 +296,7 @@ mkfs.fat 4.2 (2021-01-31)
 make[1]: Entering directory '/home/lihaotian/arceos-lab/arceos/payload'
 make -C origin
 make[2]: Entering directory '/home/lihaotian/arceos-lab/arceos/payload/origin'
+make[2]: Nothing to be done for 'all'.
 make[2]: Leaving directory '/home/lihaotian/arceos-lab/arceos/payload/origin'
 make -C hello_c
 make[2]: Entering directory '/home/lihaotian/arceos-lab/arceos/payload/hello_c'
@@ -386,13 +387,13 @@ smp = 1
 build_mode = release
 log_level = warn
 
-[37m[  0.385263 0 fatfs::dir:139] [31mIs a directory[m
-[m[37m[  0.429135 0 fatfs::dir:139] [31mIs a directory[m
-[m[37m[  0.477425 0 fatfs::dir:139] [31mIs a directory[m
-[m[37m[  0.535276 0 fatfs::dir:139] [31mIs a directory[m
+[37m[  0.931019 0 fatfs::dir:139] [31mIs a directory[m
+[m[37m[  1.010482 0 fatfs::dir:139] [31mIs a directory[m
+[m[37m[  1.106282 0 fatfs::dir:139] [31mIs a directory[m
+[m[37m[  1.200653 0 fatfs::dir:139] [31mIs a directory[m
 [mHypervisor ...
 app: /sbin/skernel2
-[37m[  0.563060 0:2 axruntime::lang_items:5] [31mpanicked at exercises/simple_hv/src/main.rs:41:9:
+[37m[  1.257511 0:2 axruntime::lang_items:5] [31mpanicked at exercises/simple_hv/src/main.rs:41:9:
 Cannot load app! NotFound[m
 [msimple_hv default
-200
+300
